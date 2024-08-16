@@ -13,7 +13,7 @@ def role_required(role:str = None):
       @wraps(fn)
       def wrapper(*args, **kwargs):
          
-         # Verifica que el token JWT sea válido y que el usuario que lo ha proporcionado tenga el rol necesario.
+       #la función verify_jwt_in_request() de Flask-JWT-Extended se encarga de verificar que el token JWT (JSON Web Token) enviado sea válido y ha sido generado con la firma correcta en el backend.
          verify_jwt_in_request()
          
          # Obtiene la identidad del usuario que ha proporcionado el token JWT.
